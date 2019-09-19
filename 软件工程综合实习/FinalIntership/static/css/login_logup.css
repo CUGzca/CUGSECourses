@@ -1,0 +1,17 @@
+ .body{
+     background-color: #f5f5f5;
+ }
+
+.form-container{
+    width: 300px;
+    margin:0 auto;
+}
+
+.page-title{
+    text-align: center;
+}
+
+ .form-control{
+     height: 40px;
+ }
+

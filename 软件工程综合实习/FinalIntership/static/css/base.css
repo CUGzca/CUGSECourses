@@ -1,0 +1,10 @@
+.body{
+     background:#f5f5f5;
+}
+.main{
+    background: #fff;
+    width:730px;
+    margin:0 auto;
+    overflow:hidden;
+    padding: 10px;
+}

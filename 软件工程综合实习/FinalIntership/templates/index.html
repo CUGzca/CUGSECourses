@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+{% block title %}首页{% endblock %}
+
+{% block head %}
+   <link rel="stylesheet" href="{{ url_for('static',filename="css/main.css") }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename="dist/sortable.min.css") }}">
+    <script type="text/javascript" src="{{ url_for('static',filename="dist/sortable.min.js") }}"></script>
+{% endblock %}
+
+{% block main %}
+<div class="sortable">
+<div class="container">
+  <div class="wrapper">
+  <div id="sortable" class="sjs-default">
+
+
+      <div data-sjsel="flatty" style="height: 500px;">
+        <div class="card"style="text-align: center;"> <img class="card__picture" src="{{ url_for('static',filename='images/item-1.png') }}"  alt="">
+          <div class="card-infos">
+            <h2 class="card__title">视频分类类别</h2>
+                <p class="card__text">视频描述信息 </p>
+          </div>
+        </div>
+      </div>
+
+
+      {% for picture in pictures %}<div data-sjsel="flatty" style="height: 500px;">
+        <div class="card"style="text-align: center;"> <img class="card__picture" src="static/images/{{ picture.path }}"  alt="">
+          <div class="card-infos">
+            <h2 class="card__title">{{ picture.classification }}</h2>
+                <p class="card__text">{{ picture.description }} </p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+
+    <!--<ul class="sortable__nav nav">
+      <li> <a data-sjslink="all" class="nav__link" style="color: #2D2D2D"> 全部 </a> </li>
+      <li> <a data-sjslink="flatty" class="nav__link"style="color: #2D2D2D"> 科技 </a> </li>
+      <li> <a data-sjslink="funny" class="nav__link"style="color: #2D2D2D"> 军事 </a> </li>
+      <li> <a data-sjslink="boring" class="nav__link"style="color: #2D2D2D"> 娱乐 </a> </li>
+    </ul>
+
+    <div id="sortable" class="sjs-default">
+      <div data-sjsel="flatty">
+        <div class="card"> <img class="card__picture" src="{{ url_for('static',filename='images/item-1.png') }}" alt="">
+          <div class="card-infos">
+            <h2 class="card__title">视频1</h2>
+                <p class="card__text"> 视频1的描述信息 </p>
+          </div>
+        </div>
+      </div>
+
+      <div data-sjsel="flatty">
+        <div class="card"> <img class="card__picture" src="{{ url_for('static',filename='images/item-2.png') }}" alt="">
+          <div class="card-infos">
+            <h2 class="card__title">视频2</h2>
+            <p class="card__text"> 视频2的描述信息 </p>
+          </div>
+        </div>
+      </div>
+
+      <div data-sjsel="funny">
+        <div class="card"> <img class="card__picture" src="{{ url_for('static',filename='images/item-3.png') }}" alt="">
+          <div class="card-infos">
+            <h2 class="card__title">视频3</h2>
+            <p class="card__text">视频3的描述信息 </p>
+          </div>
+        </div>
+      </div>
+
+      <div data-sjsel="flatty">
+        <div class="card"> <img class="card__picture" src="{{ url_for('static',filename='images/item-4.png') }}" alt="">
+          <div class="card-infos">
+            <h2 class="card__title">视频4</h2>
+            <p class="card__text"> 视频4的描述信息 </p>
+          </div>
+        </div>
+      </div>
+
+      <div data-sjsel="flatty">
+        <div class="card"> <img class="card__picture" src="{{ url_for('static',filename='images/item-5.png') }}" alt="">
+          <div class="card-infos">
+            <h2 class="card__title">视频5</h2>
+            <p class="card__text"> 视频5的描述信息</p>
+          </div>
+        </div>
+      </div>
+
+      <div data-sjsel="funny">
+        <div class="card"> <img class="card__picture" src="{{ url_for('static',filename='images/item-6.png') }}" alt="">
+          <div class="card-infos">
+            <h2 class="card__title">视频6</h2>
+            <p class="card__text"> 视频6的描述信息 </p>
+          </div>
+        </div>
+      </div>
+
+      <div data-sjsel="flatty">
+        <div class="card"> <img class="card__picture" src="{{ url_for('static',filename='images/item-7.png') }}" alt="">
+          <div class="card-infos">
+            <h2 class="card__title">视频7</h2>
+            <p class="card__text">视频7的描述信息 </p>
+          </div>
+        </div>
+      </div>
+
+      <div data-sjsel="flatty">
+        <div class="card"> <img class="card__picture" src="{{ url_for('static',filename='images/item-8.png') }}" alt="">
+          <div class="card-infos">
+            <h2 class="card__title">视频8</h2>
+            <p class="card__text"> 视频8的描述信息 </p>
+          </div>
+        </div>
+      </div>
+
+      <div data-sjsel="funny">
+        <div class="card"> <img class="card__picture" src="{{ url_for('static',filename='images/item-9.png') }}" alt="">
+          <div class="card-infos">
+            <h2 class="card__title">视频9</h2>
+            <p class="card__text"> 视频9的描述信息 </p>
+          </div>
+        </div>
+      </div>
+
+        <div data-sjsel="boring">
+                <div class="card"> <img class="card__picture" src="{{ url_for('static',filename='images/item-9.png') }}" alt="">
+                <div class="card-infos">
+                    <h2 class="card__title">视频9</h2>
+                     <p class="card__text"> 视频9的描述信息 </p>
+                </div>
+        </div>
+        </div>
+    </div>
+  </div>
+</div>-->
+</div>
+
+
+<script type="text/javascript">document.querySelector('#sortable').sortablejs()</script>
+{% endblock %}

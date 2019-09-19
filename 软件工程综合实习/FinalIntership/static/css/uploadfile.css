@@ -1,0 +1,104 @@
+  .upload_warp_img_div_del {
+      position: absolute;
+      top: 6px;
+      width: 16px;
+      right: 4px;
+    }
+
+    .upload_warp_img_div_top {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 30px;
+      background-color: rgba(0, 0, 0, 0.4);
+      line-height: 30px;
+      text-align: left;
+      color: #fff;
+      font-size: 12px;
+      text-indent: 4px;
+    }
+
+    .upload_warp_img_div_text {
+      white-space: nowrap;
+      width: 80%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .upload_warp_img_div img {
+      max-width: 100%;
+      max-height: 100%;
+      vertical-align: middle;
+    }
+
+    .upload_warp_img_div {
+      position: relative;
+      height: 100px;
+      width: 120px;
+      border: 1px solid #ccc;
+      margin: 0px 30px 10px 0px;
+      float: left;
+      line-height: 100px;
+      display: table-cell;
+      text-align: center;
+      background-color: #eee;
+      cursor: pointer;
+    }
+
+    .upload_warp_img {
+      border-top: 1px solid #D2D2D2;
+      padding: 14px 0 0 14px;
+      overflow: hidden
+    }
+
+    .upload_warp_text {
+      text-align: left;
+      margin-bottom: 10px;
+      padding-top: 10px;
+      text-indent: 14px;
+      border-top: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    .upload_warp_right {
+      float: left;
+      width: 57%;
+      margin-left: 2%;
+      height: 100%;
+      border: 1px dashed #999;
+      border-radius: 4px;
+      line-height: 130px;
+      color: #999;
+    }
+
+    .upload_warp_left img {
+      margin-top: 32px;
+    }
+
+    .upload_warp_left {
+      float: left;
+      width: 40%;
+      height: 100%;
+      border: 1px dashed #999;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .upload_warp {
+      margin: 14px;
+      height: 130px;
+    }
+
+    .upload {
+      border: 1px solid #ccc;
+      background-color: #fff;
+      width: 650px;
+      box-shadow: 0px 1px 0px #ccc;
+      border-radius: 4px;
+    }
+
+    .hello {
+      width: 650px;
+      margin-left: 34%;
+      text-align: center;
+    }
