@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- 引入 ECharts 文件 -->
+    <title>数据展示</title>
+{#    <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>#}
+    <script src={{ url_for('static',filename='echarts.js')}}></script>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main1" style="width: 600px;height:400px;float: left"></div>
+    <div id="main2" style="width: 600px;height:400px;float: left"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main1'));
+        // 指定图表的配置项和数据
+        var option1 = {
+            title: {
+                text: '24小时交通流量表'
+            },
+            tooltip: {},
+            legend: {
+                data:['流量']
+            },
+            xAxis: {
+                data: ["0-1","1-2","2-3","3-4","4-5","5-6","6-7","7-8","8-9","9-10","10-11","11-12",
+"12-13","13-14","14-15","15-16","16-17","17-18","18-19","19-20","20-21","21-22","22-23","23-24"]
+            },
+            yAxis: {},
+            series: [{
+                name: '流量',
+                type: 'bar',
+                data: [{{ datas[0] }},{{ datas[1] }} , {{ datas[2] }}, {{ datas[3] }}, {{ datas[4] }}, {{ datas[5] }},
+                            {{ datas[6] }},{{ datas[7] }},{{ datas[8] }},{{ datas[9] }},{{ datas[10] }},{{ datas[11] }},
+                            {{ datas[12] }},{{ datas[13] }},{{ datas[14] }},{{ datas[15] }},{{ datas[16] }},{{ datas[17] }},
+                            {{ datas[18] }},{{ datas[19] }},{{ datas[20] }},{{ datas[21] }},{{ datas[22] }},{{ datas[23] }},
+                ]
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option1);
+    </script>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main2'));
+        // 指定图表的配置项和数据
+        option2= {
+                title : {
+                    text: '24 小时行车速度折线图',
+                },
+                tooltip : {
+                    trigger: 'axis'
+                },
+                legend: {
+                    data:['最大速度','最小速度']
+                },
+                toolbox: {
+                    show : true,
+                    feature : {
+                        mark : {show: true},
+                        dataView : {show: true, readOnly: false},
+                        magicType : {show: true, type: ['line', 'bar']},
+                        restore : {show: true},
+                        saveAsImage : {show: true}
+                    }
+                },
+                calculable : true,
+                xAxis : [
+                    {
+                        type : 'category',
+                        boundaryGap : false,
+                        data : ["0-1","1-2","2-3","3-4","4-5","5-6","6-7","7-8","8-9","9-10","10-11","11-12",
+"12-13","13-14","14-15","15-16","16-17","17-18","18-19","19-20","20-21","21-22","22-23","23-24"]
+                    }
+                ],
+                yAxis : [
+                    {
+                        type : 'value',
+                        axisLabel : {
+                            formatter: '{value} '
+                        }
+                    }
+                ],
+                series : [
+                    {
+                        name:'车速',
+                        type:'line',
+                        data:[{{ datas[24] }},{{ datas[25] }} , {{ datas[26] }}, {{ datas[27] }}, {{ datas[28] }}, {{ datas[29] }},
+                            {{ datas[30] }},{{ datas[31] }},{{ datas[32] }},{{ datas[33] }},{{ datas[34] }},{{ datas[35] }},
+                            {{ datas[36] }},{{ datas[37] }},{{ datas[38] }},{{ datas[39] }},{{ datas[40] }},{{ datas[41] }},
+                            {{ datas[42] }},{{ datas[43] }},{{ datas[44] }},{{ datas[45] }},{{ datas[46] }},{{ datas[47] }}],
+                        markPoint : {
+                            data : [
+                                {type : 'max', name: '最大值'},
+                                {type : 'min', name: '最小值'}
+                            ]
+                        },
+                        markLine : {
+                            data : [
+                                {type : 'average', name: '平均值'}
+                            ]
+                        }
+                    }
+                ]
+            };
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option2);
+    </script>
+</body>
+
+</html>
