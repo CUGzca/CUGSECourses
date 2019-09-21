@@ -1,0 +1,45 @@
+﻿  HuffmanCompress.cpp
+c:\users\yinwei\source\repos\huffmancompress\huffmancompress\huffmancompress.cpp(3): warning C4603: “_CRT_SECURE_NO_WARNINGS”: 未定义宏或在预编译头使用后定义发生改变
+  c:\users\yinwei\source\repos\huffmancompress\huffmancompress\huffmancompress.cpp(3): note: 将宏添加到预编译头中，而不是在此处定义
+  c:\users\yinwei\source\repos\huffmancompress\huffmancompress\huffmancompress.cpp(5): note: 使用预编译头
+c:\users\yinwei\source\repos\huffmancompress\huffmancompress\huffmancompress.cpp(102): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\yinwei\source\repos\huffmancompress\huffmancompress\huffmancompress.cpp(170): warning C4244: “初始化”: 从“LongType”转换到“int”，可能丢失数据
+c:\users\yinwei\source\repos\huffmancompress\huffmancompress\huffmantree.h(43): warning C4018: “<”: 有符号/无符号不匹配
+  c:\users\yinwei\source\repos\huffmancompress\huffmancompress\huffmantree.h(39): note: 编译 类 模板 成员函数 "HuffmanTree<CharInfo>::HuffmanTree(T *,size_t,T)" 时
+          with
+          [
+              T=CharInfo
+          ]
+  c:\users\yinwei\source\repos\huffmancompress\huffmancompress\huffmancompress.cpp(69): note: 参见对正在编译的函数 模板 实例化“HuffmanTree<CharInfo>::HuffmanTree(T *,size_t,T)”的引用
+          with
+          [
+              T=CharInfo
+          ]
+  c:\users\yinwei\source\repos\huffmancompress\huffmancompress\huffmancompress.cpp(69): note: 参见对正在编译的 类 模板 实例化 "HuffmanTree<CharInfo>" 的引用
+c:\users\yinwei\source\repos\huffmancompress\huffmancompress\heap.h(46): warning C4018: “<”: 有符号/无符号不匹配
+  c:\users\yinwei\source\repos\huffmancompress\huffmancompress\heap.h(42): note: 编译 类 模板 成员函数 "void Heap<HuffmanTreeNode<CharInfo> *,WeightLessThan<T>>::AdjustDown(int)" 时
+          with
+          [
+              T=CharInfo
+          ]
+  c:\users\yinwei\source\repos\huffmancompress\huffmancompress\heap.h(68): note: 参见对正在编译的函数 模板 实例化“void Heap<HuffmanTreeNode<CharInfo> *,WeightLessThan<T>>::AdjustDown(int)”的引用
+          with
+          [
+              T=CharInfo
+          ]
+  c:\users\yinwei\source\repos\huffmancompress\huffmancompress\huffmantree.h(42): note: 参见对正在编译的 类 模板 实例化 "Heap<HuffmanTreeNode<CharInfo> *,WeightLessThan<T>>" 的引用
+          with
+          [
+              T=CharInfo
+          ]
+  c:\users\yinwei\source\repos\huffmancompress\huffmancompress\huffmantree.h(39): note: 编译 类 模板 成员函数 "HuffmanTree<CharInfo>::HuffmanTree(T *,size_t,T)" 时
+          with
+          [
+              T=CharInfo
+          ]
+  c:\users\yinwei\source\repos\huffmancompress\huffmancompress\huffmancompress.cpp(69): note: 参见对正在编译的函数 模板 实例化“HuffmanTree<CharInfo>::HuffmanTree(T *,size_t,T)”的引用
+          with
+          [
+              T=CharInfo
+          ]
+  HuffmanCompress.vcxproj -> C:\Users\yinwei\source\repos\HuffmanCompress\Debug\HuffmanCompress.exe
