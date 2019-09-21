@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="mineSweeping:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/mineSweeping_jar</output-path>
+    <root id="archive" name="mineSweeping.jar">
+      <element id="module-output" name="mineSweeping" />
+    </root>
+  </artifact>
+</component>
